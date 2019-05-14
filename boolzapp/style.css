@@ -5,16 +5,35 @@
 }
 
 .container{
+  height:100vh;
   width:100%;
-  background-color:lightgrey;  
+  background-color:lightgrey;
+  margin:0 auto;
 }
-
+.container:after{
+  clear:both;
+  display:table;
+  content:'';
+}
 .lato_a{
   width:20%;
+  border:1px solid black;
+  float:left;
+}
+
+.lato_a,
+.lato_b{
   height:100vh;
+}
+
+.cornice{
+  width:100%;
+  height:50px;
+  background-color:darkgrey;
 }
 
 .lato_b{
-  width:80%;
-  height:100vh;
+  float:left;
+  width:80%;;
+  border:1px solid black;
 }
