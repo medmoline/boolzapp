@@ -18,20 +18,42 @@ $('.input_container input').keypress(function(event){
     computer_response();
   }
 });
+//pl
+$('.search_container input').keyup(function(event){
+  //salvo il valore dell'input
+  var search_name = $('.search_container input').val();
+  //se il valore è maggiore di zero
+    if (search_name.length > 0){
+      //a tutti gli h3
+      $('.amico_container .nome_amico h3').each(function(){
+      //se this non è incluso nel valore
+        if($(this).text().toLowerCase().includes(search_name.toLowerCase()) == false){
+          //cnon lo mostri
+          $(this).parent().parent().hide();
+          }
+        })
+      }
+    });
+
+
 
 //funzione per mandare messaggio
 function send_message(){
   var message = $('.input_container input').val();
-  //faccio una copia del div nascosto
-  var copia = $('.message_container.template').clone();
-  //gli rimuovo la classe
-  copia.removeClass('template');
-  //setto l'html con il messaggio scritto nel div figlio del div template e aggiungo la classe my_text
-  copia.children('.message_template').html( message).addClass('my_text');
-  //appendo il tutto al contenitore reale dove verrà aggiunto il div creato
-  $('.real_message_container').append(copia);
-  //imposto l'input a zero
-  message = $('.input_container input').val('');
+  //se il  messaggio è maggiore di zero
+  if(message.length > 0){
+    //faccio una copia del div nascosto
+    var copia = $('.message_container.template').clone();
+    //gli rimuovo la classe
+    copia.removeClass('template');
+    //setto l'html con il messaggio scritto nel div figlio del div template e aggiungo la classe my_text
+    copia.children('.message_template').html( message).addClass('my_text');
+    //appendo il tutto al contenitore reale dove verrà aggiunto il div creato
+    $('.real_message_container').append(copia);
+    //imposto l'input a zero
+    message = $('.input_container input').val('');
+  }
+
 }
 
 //funzione per la risposta del computer

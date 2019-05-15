@@ -120,7 +120,8 @@
   border-radius:100%;
 }
 
-.nome_amico{
+.nome_amico,
+.nome_amico_2{
   float:left;
   padding-left:10px;
 }
