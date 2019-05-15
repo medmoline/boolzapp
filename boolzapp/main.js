@@ -14,7 +14,7 @@ $('.send_text').click(function() {
   copia.removeClass('template');
   console.log(copia);
   //setto l'html con il messaggio scritto nel div figlio del div template
-  copia.children('.message_template').html('<p class="my_text">'+ message +'</p>');
+  copia.children('.message_template').html('<p>'+ message +'</p>').addClass('my_text');
   console.log(copia);
   //appendo il tutto al contenitore reale dove verrà aggiunto il div creato
   $('.real_message_container').append(copia);
