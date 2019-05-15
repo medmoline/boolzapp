@@ -22,13 +22,15 @@ $('.input_container input').keypress(function(event){
 $('.search_container input').keyup(function(event){
   //salvo il valore dell'input
   var search_name = $('.search_container input').val();
+  //valore di reset per tornare al punto di partenza 
+  $('.amico_container').show();
   //se il valore è maggiore di zero
     if (search_name.length > 0){
       //a tutti gli h3
       $('.amico_container .nome_amico h3').each(function(){
       //se this non è incluso nel valore
         if($(this).text().toLowerCase().includes(search_name.toLowerCase()) == false){
-          //cnon lo mostri
+          //non lo mostri
           $(this).parent().parent().hide();
           }
         })
