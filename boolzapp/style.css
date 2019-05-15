@@ -26,6 +26,7 @@
 .cornice{
   width:100%;
   background-color:#dbdbdd;
+  padding: 0 10px;
 }
 
 .hgt-50{
@@ -47,11 +48,11 @@
 }
 
 .options{
+  width:calc(100% - 50px);
+  padding:0 10px;
   float:left;
   text-align:right;
-  width:calc(100% - 50px);
   position:relative;
-  padding:0 10px;
 }
 
 .options ul{
@@ -135,6 +136,11 @@
   width:70%;;
   border:1px solid black;
 }
+
+.options_2{
+
+  width:70%;
+}
 /*parte testuale*/
 .text_container{
   height:85vh;
@@ -142,7 +148,6 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 
 .computer_message{
   float:left;
@@ -153,7 +158,7 @@
 .my_text{
   float:right;
   background-color:green;
-  width:60%;
+  width:60% ;
 }
 
 .template{

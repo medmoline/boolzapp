@@ -18,6 +18,6 @@ $('.send_text').click(function() {
   console.log(copia);
   //appendo il tutto al contenitore reale dove verrà aggiunto il div creato
   $('.real_message_container').append(copia);
-  //imposto l'input a zero 
-  message = $('.input_container input').val('')
+  //imposto l'input a zero
+  message = $('.input_container input').val('');
 })
