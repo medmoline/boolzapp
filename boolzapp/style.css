@@ -144,7 +144,7 @@
 /*parte testuale*/
 .text_container{
   height:85vh;
-  background-image: url('http://www.sfondissimo.com/wp-content/gallery/sfondi-ipad/Stardust2.jpg');
+  background-image: url('http://pavbca.com/walldb/original/5/f/6/318480.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -159,7 +159,7 @@
   float:left;
   background-color:white;
   padding:5px;
-  clear:right;
+  clear:both;
   max-width:60%;
 }
 
@@ -167,7 +167,7 @@
   float:right;
   background-color:green;
   padding:5px;
-  clear:left;
+  clear:both;
   max-width:60%;
 }
 

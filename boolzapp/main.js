@@ -6,18 +6,27 @@
 $('.send_text').click(function() {
   //salvo il valore del messaggio scritto in una variabile
   var message = $('.input_container input').val();
-  console.log(message);
   //faccio una copia del div nascosto
   var copia = $('.message_container.template').clone();
-  console.log(copia);
   //gli rimuovo la classe
   copia.removeClass('template');
-  console.log(copia);
-  //setto l'html con il messaggio scritto nel div figlio del div template
+  //setto l'html con il messaggio scritto nel div figlio del div template e aggiungo la classe my_text
   copia.children('.message_template').html('<p>'+ message +'</p>').addClass('my_text');
-  console.log(copia);
   //appendo il tutto al contenitore reale dove verrà aggiunto il div creato
   $('.real_message_container').append(copia);
   //imposto l'input a zero
   message = $('.input_container input').val('');
+  //MILESTONE B:
+  //creo una funzione setTimceout
+  setTimeout(function(){
+    //creo una seconda copia del div nascostso
+     var copia_computer = $('.message_container.template').clone();
+     //Gli rimuovo la classe
+     copia_computer.removeClass('template');
+     //setto l'html con il messaggio scritto nel div figlio e gli aggiungo la classe apposita per il computer
+     copia_computer.children('.message_template').html('<p> Ciao </p>').addClass('computer_message');
+     //appendo tutto al container reale
+     $('.real_message_container').append(copia_computer);
+  }, 1000);//parirà 1 secondo dopo aver scritto il messaggio
+
 })
