@@ -21,8 +21,8 @@ $('.input_container input').keypress(function(event){
 //pl
 $('.search_container input').keyup(function(event){
   //salvo il valore dell'input
-  var search_name = $('.search_container input').val();
-  //valore di reset per tornare al punto di partenza 
+  var search_name = $(this).val();
+  //valore di reset per tornare al punto di partenza
   $('.amico_container').show();
   //se il valore è maggiore di zero
     if (search_name.length > 0){
@@ -30,12 +30,13 @@ $('.search_container input').keyup(function(event){
       $('.amico_container .nome_amico h3').each(function(){
       //se this non è incluso nel valore
         if($(this).text().toLowerCase().includes(search_name.toLowerCase()) == false){
-          //non lo mostri
-          $(this).parent().parent().hide();
-          }
-        })
-      }
-    });
+          //con la funzione closest andiamo a prendere il padre di $(this) e non lo mostri
+          $(this).closest('.amico_container').hide();
+        }
+      })
+    }
+});
+
 
 
 
