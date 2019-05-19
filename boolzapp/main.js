@@ -74,24 +74,31 @@ $(document).ready(function(){
   // recupero il nome del contatto cliccato
       var contact_name = $(this).find('.contact_name .name_container h4').text();
       console.log(contact_name);
-      // porto il nome del contatto cliccato nello spazio in alto, quello del contatto corrente
+  //sostiuisco il testo del nome corrente con quello cliccato
       $('.name_container_current h4').text(contact_name);
       // recupero l'immagine del contatto cliccato
       var contact_img = $(this).find('.img_friend').children('img').attr('src');
-      // porto l'immagine del contatto cliccato nello spazio dell'immagine in alto, quella del contatto corrente
+    // sostituisco l'immagine correte con quella del contatto cliccato
       $('.img_friend_current').children('img').attr('src', contact_img);
+    //recupero orario ultimo messaggio
+      var time = $(this).find('.contact_name .name_container span').text();
+    //e lo sostituisco allo small dell'ultimo accesso
+      $('.name_container_current small').text('Ultimo accesso oggi alle  ' + time);
 
     });
 
 
+// intercetto il click sull'icona e uso (document).on per intercettare il click anche dei messaggi inviati successivamente al caricamento della pagina
   $(document).on('click','.menu_container i', function(){
     $(this).closest('.menu_container').siblings('.delete_menu').toggleClass('invisible');
   });
-   $(document).on('click','.delete', function(){
-    $(this).closest('.message_container').children('.message_template').html('<p>Hai eliminato questo messaggio!!</p>');
+//intercetto il click su 'Cancella Messaggio' e faccio sparire il
+  $(document).on('click','.delete', function(){
+    $(this).closest('.message_container').children('.message_template').html('<p>-----Hai eliminato questo messaggio!!-----</p>');
     $('.delete_menu').hide();
-   });
+  });
 
+//Creo varie conversazioni
 
 
 })
