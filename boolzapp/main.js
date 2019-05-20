@@ -98,7 +98,58 @@ $(document).ready(function(){
     $('.delete_menu').hide();
   });
 
-//Creo varie conversazioni
+  //Creo varie conversazioni
+  conversazione_0 = [
+    {
+      'text' : 'Come stai?',
+      'class': 'computer_message'
+    },
+    {
+      'text' : 'Tutto bene,tu?',
+      'class': 'my_text'
+    },
+    {
+      'text' : 'Bene, ci vediamo oggi per un caffè?',
+      'class':  'computer_message'
+    },
+    {
+      'text' : 'Ovvio, ci vediamo per le tre e mezza al solito bar ! :D',
+      'class':  'computer_message',
+    }
+  ];
 
+  conversazione_1 = [
+    {
+      'text' : 'Oooooo ma allora stasera ci sei per un calcetto?',
+      'class': 'computer_message'
+    },
+    {
+      'text' : 'Nono macchè stasera non posso, scusami !! ',
+      'class': 'my_text'
+    }
+  ];
+
+  conversazione_2 = [];
+  conversazione_3 = [];
+  conversazione_4 = [];
+  conversazione_5 = [];
+  conversazione_6 = [];
+  conversazione_7 = [];
+  conversazione_8 = [];
+
+  //creo un array contenente tutte le conversazioni
+
+  conversazioni = [
+    conversazione_0,
+    conversazione_1,
+    conversazione_2,
+    conversazione_3,
+    conversazione_4,
+    conversazione_5,
+    conversazione_6,
+    conversazione_7,
+    conversazione_8
+
+  ];
 
 })
